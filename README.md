@@ -32,3 +32,5 @@ And now you can see it on <http://localhost:3000/api/games/21>.
 This app has a single route, `/api/games/:id`, where `:id` is a numeric identifier of the game match.
 
 That's all, folks!
+
+Thank you
