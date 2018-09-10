@@ -11,6 +11,8 @@ const logPath = path.join(__dirname, '..', 'games.log');
 start();
 
 async function start() {
+  console.log('Seeding database');
+  console.log('This may take awhile...')
   const db = new Database(dbPath);
   const log = (await getLog()).split('\n');
   const TOKEN_PATTERN = new RegExp(/^[ 0-9]+:\d{2} (?<type>\w+): ?(?<payload>.*)?$/);
@@ -51,12 +53,13 @@ async function start() {
             this.lastID,
           ], (err) => {
             if (err) throw err;
-            console.log(`Inserted kill#${i} of game#${this.lastID}`);
+            // console.log(`Inserted kill#${i} of game#${this.lastID}`);
           });
         });
       });
     });
     db.run('COMMIT');
+    console.log('Finished!');
   });
 }
 
