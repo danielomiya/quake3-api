@@ -31,6 +31,17 @@ And now you can see it on <http://localhost:3000/api/games/21>.
 
 This app has a single route, `/api/games/:id`, where `:id` is a numeric identifier of the game match.
 
+## To do
+
+- Analyse code with SonarQube
+- Create Jenkins pipeline, eg:
+  - git clone (checkout source code)
+  - npm i (install dependencies)
+  - npm run test (check if all tests pass)
+  - npm audit (check insecure modules)
+  - npm run sonar
+  - npm start
+
 That's all, folks!
 
 Thank you
